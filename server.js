@@ -5,10 +5,12 @@ const mongoose = require('mongoose')
 require('dotenv').config() // has to be above where set variable for DB 
 const dbUrl = process.env.MONGODB_URL
 const { expressjwt } = require('express-jwt')
+const path = require('path')
 
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 //mongoose.set('strictQuery', true),  
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -32,6 +34,10 @@ app.use((err, req, res, next) => {
       res.status(err.status)
     }
     return res.send({errMsg: err.message})
+})
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html" ))
 })
 
 app.listen(8000, () => {
