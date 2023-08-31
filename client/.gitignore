@@ -10,8 +10,8 @@ logs
 
 Thumbs.db
 
-build/
-dist/
+# build/
+# dist/
 node_modules/
 temp/
 test/

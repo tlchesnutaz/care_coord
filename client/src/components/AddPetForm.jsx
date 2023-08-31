@@ -134,6 +134,7 @@ export default function AddPetForm() {
         <input 
           type="text" 
           name="chipNum" 
+          id="chipNum"
           placeholder="Microchip #"
           value={inputs.chipNum} 
           onChange={handleChange} 
