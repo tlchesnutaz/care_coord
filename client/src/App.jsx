@@ -45,10 +45,10 @@ export default function App() {
             <Link className="footer-logo" to="/" > CareCoordinator </Link> 
         </span>
         <span>
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer" >< FaFacebookF className="face" /></a> 
-          <a href="https://www.github.com" target="_blank" rel="noreferrer">< FaGithub className="git" /></a>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">< FaInstagram className="insta" /></a>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">< FaTwitter className="twit" /></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="facebook">< FaFacebookF className="face" /></a> 
+          <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" aria-label="github">< FaGithub className="git" /></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="instagram">< FaInstagram className="insta" /></a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="twitter">< FaTwitter className="twit" /></a>
         </span>
         <p className="disclaimer"> Disclaimer: </p>
       </footer>

@@ -38,6 +38,7 @@ footer {
   position: absolute;
   bottom: 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .face, .git, .insta, .twit {
@@ -49,6 +50,9 @@ svg:hover {
   height: 1.1em;
   width: 1.1em;
 }
+.copyright, .disclaimer, .footer-logo {
+  max-width: 100%;
+}
 
 /* home/login page styling */
 /* set this to be responsive in middle of page */
@@ -56,18 +60,22 @@ svg:hover {
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%); 
+  max-width: 100%; 
 }
 .title, .subtitle, .account, .auth-form, .slider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 10px 0px;
 }
 input {
   padding-left: 5px;
+  max-width: 100%;
 }
 .title {
   font-size: 4vh;
+  line-break: anywhere;
 }
 .subtitle {
   font-size: 3vh;
@@ -179,4 +187,13 @@ fieldset label {
   width: 250px;
   padding: 5px 0px 10px 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 3vh;
+  }
+  .subtitle {
+    font-size: 2.5vh;
+  }
 }

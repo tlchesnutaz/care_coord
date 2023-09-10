@@ -21,10 +21,7 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         console.error('Error connecting to DB: ', error)
     })    
 
-//app.use('/api/owners', require('./routes/ownerRouter.js'))
 app.use('/api/auth', require('./routes/authRouter.js'))
-// app.use('/api/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
-// app.use('/api/api/pets', require('./routes/petRouter.js'))
 app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
 app.use('/api/pets', require('./routes/petRouter.js'))
 
