@@ -12,7 +12,7 @@
   line-height: 1.25;
 
   color: hsla(0, 0%, 100%, 0.85);
-  background-color: hsl(0, 5%, 65%);
+  background-color: hsl(0, 55%, 15%);
 
   box-sizing: border-box;
   padding: 0;
@@ -46,7 +46,7 @@ footer {
   margin: 5px;  
 }
 svg:hover {
-  fill: hsl(60, 75%, 75%);
+  fill: hsl(60, 25%, 95%);
   height: 1.1em;
   width: 1.1em;
 }
@@ -70,7 +70,8 @@ svg:hover {
   margin: 10px 0px;
 }
 input {
-  padding-left: 5px;
+  padding: 5px;
+  margin: 0px 5px 10px 5px;
   max-width: 100%;
 }
 .title {
@@ -82,8 +83,13 @@ input {
 }
 .slider {
   height: 200px;
-  border: 2px solid hsl(0, 0%, 15%);
+  border: 2px solid hsl(60, 25%, 95%);
   margin-top: 50px;
+}
+
+.account:hover {
+  color:aqua;
+  cursor:pointer
 }
 
 /* navbar styling */
@@ -93,10 +99,10 @@ input {
   margin: 20px;
 }
 .navbar button {
-  background-color: hsl(0, 5%, 65%);
+  background-color: hsl(15, 30%, 60%);
 }
 .navbar button:hover {
-  color: hsl(60, 75%, 75%);
+  color: hsl(60, 25%, 95%);
   border: none;
   font-size: larger;
 }
@@ -106,28 +112,25 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: hsl(60, 75%, 75%);
+  color: hsl(60, 25%, 95%);
 }
 .active {
-  color: hsl(60, 75%, 75%);
+  color: hsl(60, 25%, 95%);
 }
 
 /* button styling */
 button {
   border-radius: 5px;
   border: 2px solid transparent;
-  background-color: hsl(0, 0%, 35%);
+  background-color: hsl(0, 20%, 15%);
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   margin-left: 5px;
+  max-height: 40px;
 }
 button:hover {
   border: 2px solid hsl(0, 0%, 100%, 0.85);
 }
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
 
 .key {
   border: 1px solid hsla(0, 0%, 100%, 0.85);
@@ -149,13 +152,13 @@ fieldset {
   margin: 5px 5px 5px 0px;
 }
 fieldset label {
-  color: hsl(0, 0%, 35%, .85);
+  color: hsla(0, 10%, 85%, 0.85);
 }
 .add-pet-form .date {
-  color: hsl(0, 0%, 35%, .85);
+  color: hsl(0, 10%, 85%, .85);
 }
 ::placeholder {
-  color: hsl(0, 0%, 35%, .85);
+  color: hsl(0, 10%, 85%, .85);
 }
 
 /* editpetform styling */
@@ -167,10 +170,10 @@ fieldset label {
 }
 .edit-pet-form input {
   margin: 5px ;
-  color: hsl(0, 0%, 35%, .85);
+  color: hsla(0, 10%, 85%, 0.85);
 }
 .edit-pet-form .date {
-  color: hsl(0, 0%, 35%, .85);
+  color: hsl(0, 10%, 85%, .85);
 }
 
 /* petcard styling
