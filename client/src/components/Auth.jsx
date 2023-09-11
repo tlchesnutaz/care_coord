@@ -38,33 +38,37 @@ export default function Auth(){
   }
 
   return (
-    <div className="login">
+    <>
       <h1 className="title"> Pet Care Coordinator </h1>
       <p className="subtitle"> Let us help you 'tame' your pet care to-dos! </p>
-      { !toggle ?
-        <>
-          <AuthForm 
-            handleChange={handleChange}
-            handleSubmit={handleSignup}
-            inputs={inputs}
-            btnText="Sign up"
-            errMsg={errMsg}
-          />
-          { !token && <p className="account" onClick={toggleForm}> Have an Account? </p> }
-        </>
-      :
-        <>
-          <AuthForm 
-            handleChange={handleChange}
-            handleSubmit={handleLogin}
-            inputs={inputs}
-            btnText="Login"
-            errMsg={errMsg}
-          />
-          { !token && <p className="account" onClick={toggleForm}> Create Account </p> }
-        </>
-      }
-      <p className="slider"> slider of images of animals or personal upload </p>
-    </div>
+      <div className="login">
+        { !toggle ?
+          <>
+            <AuthForm 
+              handleChange={handleChange}
+              handleSubmit={handleSignup}
+              inputs={inputs}
+              btnText="CREATE ACCOUNT"
+              errMsg={errMsg}
+            />
+            { !token && <p className="account" onClick={toggleForm}> Have an Account? </p> }
+          </>
+        :
+          <>
+            <AuthForm 
+              handleChange={handleChange}
+              handleSubmit={handleLogin}
+              inputs={inputs}
+              btnText="SIGN IN"
+              errMsg={errMsg}
+            />
+            { !token && <p className="account" onClick={toggleForm}> No Account? <br /> Create One! </p> }
+          </>
+        }
+      </div>
+    </>
   )
 }
+
+
+{/* <p className="slider"> slider of images of animals or personal upload </p> */}

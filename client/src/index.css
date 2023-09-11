@@ -11,8 +11,8 @@
   font-size: 1.1rem;
   line-height: 1.25;
 
-  color: hsla(0, 0%, 100%, 0.85);
-  background-color: hsl(0, 55%, 15%);
+  color: hsl(0, 0%, 100%, 0.85);
+  background-color: hsl(0, 55%, 15%); 
 
   box-sizing: border-box;
   padding: 0;
@@ -26,6 +26,7 @@ footer will fit in. */
   position: relative;
   min-height: 95vh;
   padding-bottom: 40px;
+  padding-top: 15px;
 }
 
 /* Set the height of your Footer equal to the padding that you 
@@ -36,7 +37,7 @@ footer {
   height: 30px;
   width: 100%;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -45,136 +46,141 @@ footer {
   font-size: larger;
   margin: 5px;  
 }
-svg:hover {
-  fill: hsl(60, 25%, 95%);
-  height: 1.1em;
-  width: 1.1em;
-}
 .copyright, .disclaimer, .footer-logo {
   max-width: 100%;
-}
-
-/* home/login page styling */
-/* set this to be responsive in middle of page */
-.login {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  max-width: 100%; 
-}
-.title, .subtitle, .account, .auth-form, .slider {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 10px 0px;
-}
-input {
-  padding: 5px;
-  margin: 0px 5px 10px 5px;
-  max-width: 100%;
-}
-.title {
-  font-size: 4vh;
-  line-break: anywhere;
-}
-.subtitle {
-  font-size: 3vh;
-}
-.slider {
-  height: 200px;
-  border: 2px solid hsl(60, 25%, 95%);
-  margin-top: 50px;
-}
-
-.account:hover {
-  color:aqua;
-  cursor:pointer
-}
-
-/* navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
-}
-.navbar button {
-  background-color: hsl(15, 30%, 60%);
-}
-.navbar button:hover {
-  color: hsl(60, 25%, 95%);
-  border: none;
-  font-size: larger;
 }
 
 /* link styling */
 a {
   text-decoration: inherit;
 }
-a:hover {
-  color: hsl(60, 25%, 95%);
+a:hover, a:active, a:focus, svg:hover, svg:active, svg:focus {
+  color: whitesmoke;
+  fill: whitesmoke;
+  height: 1.1em;
+  width: 1.1em;
 }
-.active {
-  color: hsl(60, 25%, 95%);
+
+/* home/login page styling - set to be responsive in middle of page */
+.title, .subtitle {
+  text-align: center;
+}
+.title {
+  font-size: 4vh;
+  margin: 25px 0 20px 0;
+}  
+.subtitle {
+  font-size: 3vh;
+  margin-bottom: 10px;
+}
+
+.login {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  transform: translate(-45%, -45%); 
+  max-width: 100%; 
+  background: hsl(0, 0%, 100%);
+  padding: 40px;
+  /* box-shadow: 0 0 10px 0 hsla(0, 15%, 35%, 0.5), 0 5px 5px 0 hsla(0, 15%, 35%, 0.5); */
+}
+
+.account, .auth-form, .auth-form input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 2px 10px 2px;
+  background: hsl(0, 0%, 100%, 0.85);
+  color:hsl(0, 20%, 15%);
+}
+.account:hover {
+  cursor:pointer
+}
+input {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  border: 0;
+  border-bottom: 1px solid hsl(0, 15%, 35%);
+  text-align: center;
+}
+input:hover, input:active, input:focus {
+  cursor: crosshair;
+  outline: 0;
 }
 
 /* button styling */
 button {
-  border-radius: 5px;
-  border: 2px solid transparent;
-  background-color: hsl(0, 20%, 15%);
+  border: 0;
+  background: hsl(0, 20%, 15%);
+  color: hsl(0, 0%, 100%, 0.85);
   cursor: pointer;
-  padding: 5px 10px 5px 10px;
-  margin-left: 5px;
+  padding: 10px;
+  margin: 10px 0px 5px 0px;
+  width: 100%;
   max-height: 40px;
+  outline: 0;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
 }
-button:hover {
-  border: 2px solid hsl(0, 0%, 100%, 0.85);
+button:hover, button:active, button:focus {
+  background: hsl(0, 15%, 35%);
 }
 
-.key {
-  border: 1px solid hsla(0, 0%, 100%, 0.85);
+/* navbar styling */
+.navbar {
+  display: flex;
+  max-height: 40px;
+  justify-content: space-evenly;
+  margin: 0 0 20px 0;
+}
+.navbar button {
+  background-color: hsl(0, 55%, 15%);
+}
+.navbar button:hover {
+  border: none;
+  font-size: larger;
 }
 
-/* addpetform styling */
-.add-pet-form {
+/* addpetform and editpetform styling */
+.add-pet-form, .edit-pet-form {
   display: block;
   margin: auto;
-  max-width: 250px;
-  padding: 0px 0px 10px 15px;
+  max-width: 300px;
+  padding: 10px 10px 5px 10px;
+  background-color:hsl(0, 0%, 100%, 0.85)
 }
-.add-pet-form input {
-  margin: 5px 5px 5px 0px;
-  color: hsl(0, 0%, 35%, .85)
+.add-pet-form input, .edit-pet-form input, textarea {
+  border: none;
+  /* margin: 10px 5px 10px 0px; */
+  padding: 5px;
+  background-color: hsla(0, 20%, 90%, 0.7);
+  color: hsl(0, 20%, 15%);
+  border: 0;
+  border-bottom: 1px solid hsl(0, 15%, 35%);
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
 }
 fieldset {
-  border: none;
-  margin: 5px 5px 5px 0px;
+  border: 0;
+  display: flex;
+  background: hsla(0, 20%, 90%, 0.7);
+  margin: 5px 0 5px 0;
 }
-fieldset label {
-  color: hsla(0, 10%, 85%, 0.85);
-}
-.add-pet-form .date {
-  color: hsl(0, 10%, 85%, .85);
+label, legend {
+  justify-content: left;
+  padding: 0 5px 0 5px;
+  background:hsla(0, 20%, 90%, 0.7);
+  color: hsl(0, 20%, 15%);
 }
 ::placeholder {
-  color: hsl(0, 10%, 85%, .85);
+  color: hsl(0, 20%, 15%);
+}
+.radio {
+  max-width: 25px;
+  margin-top: 5px;
 }
 
-/* editpetform styling */
-.edit-pet-form {
-  display: block;
-  margin: auto;
-  max-width: 250px;
-  padding-left: 10px;
-}
-.edit-pet-form input {
-  margin: 5px ;
-  color: hsla(0, 10%, 85%, 0.85);
-}
-.edit-pet-form .date {
-  color: hsl(0, 10%, 85%, .85);
-}
 
 /* petcard styling
  'pet-list' is the container
@@ -185,11 +191,14 @@ fieldset label {
   padding: 0px 5px 0px 5px;
  } 
 .pet-card {
-  border: 1px solid hsla(0, 0%, 100%, 0.85);
+  /* border: 1px solid hsla(0, 0%, 100%, 0.85); */
   border-radius: 3px;
-  width: 250px;
-  padding: 5px 0px 10px 10px;
-  margin-bottom: 10px;
+  width: 300px;
+  margin: 10px 0px 10px 10px;
+}
+.pet-card button {
+  max-width: 40%;
+  margin: 10px 10px 5px 0px;
 }
 
 @media screen and (max-width: 450px) {
@@ -200,3 +209,12 @@ fieldset label {
     font-size: 2.5vh;
   }
 }
+
+/* .slider {
+  height: 200px;
+  border: 2px solid hsl(60, 25%, 95%);
+  margin-top: 50px;
+} */
+/* .key {
+  border: 1px solid hsla(0, 0%, 100%, 0.85);
+} */

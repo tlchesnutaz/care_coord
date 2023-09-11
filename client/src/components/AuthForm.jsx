@@ -18,6 +18,7 @@ export default function AuthForm(props){
   } = props
   
   return (
+    
     <form className="auth-form" onSubmit={handleSubmit}>
       <input 
         type="text" 
@@ -34,7 +35,8 @@ export default function AuthForm(props){
         placeholder="Password"
       />
       { !token && <button>{ btnText }</button> }
-      <p style={{color: "red"}}>{ errMsg }</p>
+      <p style={{color: "white"}}>{ errMsg }</p>
     </form>
+   
   )
 }

@@ -57,8 +57,7 @@ petRouter.put("/:petId", (req, res, next) => {
     }
     res.status(200).send(updatedPet)
   })
-  .catch
-    (err => {
+  .catch (err => {
       res.status(500)
       next(err)
     })

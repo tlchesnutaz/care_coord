@@ -6,7 +6,7 @@ export default function EditForm(props) {
 
 	const {pet, handleToggle} = props
 	const {updatePet} = useContext(AxiosContext)
-	console.log(pet)
+	// console.log(pet)
 
 	const [edits, setEdits] = useState({
 		petName: pet.petName,
@@ -48,14 +48,12 @@ export default function EditForm(props) {
 				value={edits.petName}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<input
 				type="text"
 				name="species"
 				value={edits.species}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<input
 				type="text"
 				name="specific"
@@ -63,9 +61,7 @@ export default function EditForm(props) {
 				value={edits.specific}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<label htmlFor="dob"> DOB (if known): </label>
-			<br />
 			<input
 				type="date"
 				name="dob"
@@ -74,7 +70,6 @@ export default function EditForm(props) {
 				value={edits.dob}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<label htmlFor="acquired"> Date Acquired: </label>
 			<br />
 			<input
@@ -85,9 +80,9 @@ export default function EditForm(props) {
 				value={edits.acquired}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<fieldset>
-				<legend> Gender: </legend>
+				<label> Gender: </label>
+        <label htmlFor="male"> Male </label>
 				<input
 					type="radio"
 					id="male"
@@ -96,7 +91,7 @@ export default function EditForm(props) {
 					checked={edits.gender === 'male'}
 					onChange={handleEditChange}
 				/>
-				<label htmlFor="male"> Male </label>
+        <label htmlFor="female"> Female </label>
 				<input
 					type="radio"
 					id="female"
@@ -105,10 +100,10 @@ export default function EditForm(props) {
 					checked={edits.gender === "female"}
 					onChange={handleEditChange}
 				/>
-				<label htmlFor="female"> Female </label>
 			</fieldset>
 			<fieldset>
-				<legend> Spayed/Neutered: </legend>
+				<label> Spayed/Neutered: </label>
+        <label htmlFor="yes"> Yes </label>
 				<input
 					type="radio"
 					id="yes"
@@ -117,7 +112,7 @@ export default function EditForm(props) {
 					checked={edits.neutered === "yes"}
 					onChange={handleEditChange}
 				/>
-				<label htmlFor="yes"> Yes </label>
+        <label htmlFor="no"> No </label>
 				<input
 					type="radio"
 					id="no"
@@ -126,9 +121,7 @@ export default function EditForm(props) {
 					checked={edits.neutered === "no"}
 					onChange={handleEditChange}
 				/>
-				<label htmlFor="no"> No </label>
 			</fieldset>
-			<label htmlFor="chipNum"> Microchip #: </label>
 			<input
 				type="text"
 				name="chipNum"
@@ -136,7 +129,6 @@ export default function EditForm(props) {
 				value={edits.chipNum}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<label htmlFor="lastvac"> Last Vaccinations: </label>
 			<input
 				type="date"
@@ -146,9 +138,6 @@ export default function EditForm(props) {
 				value={edits.lastVac}
 				onChange={handleEditChange}
 			/>
-			<br />
-			<label htmlFor="vetname"> Vet Name: </label>
-			<br />
 			<input
 				type="text"
 				name="vetName"
@@ -157,9 +146,7 @@ export default function EditForm(props) {
 				value={edits.vetName}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<label htmlFor="vetphone"> Vet Phone #: </label>
-			<br />
 			<input
 				type="number"
 				name="vetPhone"
@@ -168,9 +155,7 @@ export default function EditForm(props) {
 				value={edits.vetPhone}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<label htmlFor="notes"> Notes: </label>
-			<br />
 			<textarea
 				name="notes"
 				id="notes"
@@ -180,7 +165,6 @@ export default function EditForm(props) {
 				value={edits.notes}
 				onChange={handleEditChange}
 			/>
-            <br/>
 			<input
 				type="text"
 				name="owner"
@@ -188,10 +172,8 @@ export default function EditForm(props) {
 				value={edits.owner}
 				onChange={handleEditChange}
 			/>
-			<br />
 			<button onClick={handleEditSave}>Save</button>
-            <button onClick={handleToggle}>Cancel</button>
-			<br />
+      <button onClick={handleToggle}>Cancel</button>
 		</form>
 	)
 }

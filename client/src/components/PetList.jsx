@@ -19,7 +19,7 @@ export default function PetList() {
   useEffect(() => {
     getPets()
   }, [])
-  console.log(pets)
+  // console.log(pets)
 
 	return (
 		<>

@@ -34,11 +34,12 @@ export default function AddPetForm() {
     addPet(inputs) // inputs.owner
     setInputs(initInputs)
   }
-  console.log(pets)
+  // console.log(pets)
     
   return(
-    <div>
-      <h3 className="subtitle">Add A Pet</h3>    
+    <>
+      <h3 className="subtitle">Add A Pet</h3>
+      <div>   
       <form className="add-pet-form" onSubmit={handleSubmit}>   
         <input 
           type="text" 
@@ -47,7 +48,6 @@ export default function AddPetForm() {
           value={inputs.petName} 
           onChange={handleChange} 
         /> 
-        <br/>
         <input 
           type="text" 
           name="species" 
@@ -55,7 +55,6 @@ export default function AddPetForm() {
           value={inputs.species} 
           onChange={handleChange} 
         />
-        <br/>
         <input 
           type="text" 
           name="specific" 
@@ -63,9 +62,7 @@ export default function AddPetForm() {
           value={inputs.specific} 
           onChange={handleChange} 
         /> 
-        <br/>
         <label htmlFor="dob"> DOB (if known): </label>
-        <br/>
         <input 
           className="date"
           type="date"
@@ -75,7 +72,6 @@ export default function AddPetForm() {
           value={inputs.dob} 
           onChange={handleChange} 
         /> 
-        <br/>
         <label htmlFor="acquired"> Date Acquired: </label>
         <br/>
         <input 
@@ -87,10 +83,11 @@ export default function AddPetForm() {
           value={inputs.acquired} 
           onChange={handleChange} 
         /> 
-        <br/>
         <fieldset>
-          <legend> Gender: </legend>
+          <label> Gender: </label>
+          <label htmlFor="male"> Male </label>
           <input 
+          className="radio"
             type="radio"
             id="male" 
             name="gender" 
@@ -98,8 +95,9 @@ export default function AddPetForm() {
             checked={inputs.gender === "male"} 
             onChange={handleChange}
           />
-          <label htmlFor="male"> Male </label>
+          <label htmlFor="female"> Female </label>    
           <input 
+            className="radio"
             type="radio"
             id="female"
             name="gender"
@@ -107,11 +105,12 @@ export default function AddPetForm() {
             checked={inputs.gender === "female"}
             onChange={handleChange}
           />
-          <label htmlFor="female"> Female </label>    
         </fieldset>
         <fieldset>
-          <legend> Spayed/Neutered: </legend>
+          <label> Spayed/Neutered: </label>
+          <label htmlFor="yes"> Yes </label>
           <input 
+            className="radio"
             type="radio"
             id="yes"
             name="neutered" 
@@ -119,8 +118,9 @@ export default function AddPetForm() {
             checked={inputs.neutered === "yes"} 
             onChange={handleChange}
           />
-          <label htmlFor="yes"> Yes </label>
+          <label htmlFor="no"> No </label>    
           <input 
+            className="radio"
             type="radio"
             id="no"
             name="neutered"
@@ -128,9 +128,8 @@ export default function AddPetForm() {
             checked={inputs.neutered === "no"}
             onChange={handleChange}
           />
-          <label htmlFor="no"> No </label>    
         </fieldset>
-        <label htmlFor="chipNum"> Microchip #: </label>
+        {/* <label htmlFor="chipNum"> Microchip #: </label> */}
         <input 
           type="text" 
           name="chipNum" 
@@ -139,7 +138,6 @@ export default function AddPetForm() {
           value={inputs.chipNum} 
           onChange={handleChange} 
         />
-        <br/>
         <label htmlFor="lastvac"> Last Vaccinations: </label>
         <input
           className="date" 
@@ -150,8 +148,7 @@ export default function AddPetForm() {
           value={inputs.lastVac} 
           onChange={handleChange} 
         /> 
-        <br/>
-        <label htmlFor="vetname"> Vet Name: </label>
+        {/* <label htmlFor="vetname"> Vet Name: </label> */}
         <input 
           type="text"
           name="vetName"
@@ -160,7 +157,6 @@ export default function AddPetForm() {
           value={inputs.vetName} 
           onChange={handleChange} 
         /> 
-        <br/>
         <label htmlFor="vetphone"> Vet Phone #: </label>
         <input 
           type="number"
@@ -170,18 +166,16 @@ export default function AddPetForm() {
           value={inputs.vetPhone} 
           onChange={handleChange} 
         />
-        <br/>
         <label htmlFor="notes"> Notes: </label>
         <textarea 
           name="notes"
           id="notes"
           rows={3}
           cols={30}
-          placeholder="Other inportant information, such as surgeries, chronic conditions, etc."
+          placeholder="Other inportant information, such as surgeries, allergies, chronic conditions, etc."
           value={inputs.notes}
           onChange={handleChange}
         />
-        <br/>
         <input 
           type="text"
           name="owner" 
@@ -189,7 +183,6 @@ export default function AddPetForm() {
           value={inputs.owner} 
           onChange={handleChange} 
         />
-        <br/>
         {/* <input
             type="file"
             name="petpic"
@@ -200,6 +193,7 @@ export default function AddPetForm() {
         /> */}
         <button> Add Pet </button>
     </form>
-    </div>
+    </div> 
+    </>
   )
 }
