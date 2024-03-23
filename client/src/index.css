@@ -94,8 +94,10 @@ a:hover, a:active, a:focus, svg:hover, svg:active, svg:focus {
   color:hsl(0, 20%, 15%);
 }
 .account:hover {
-  cursor:pointer
+  cursor:pointer;
+  font-weight: 600
 }
+
 input {
   width: 100%;
   padding: 10px 0px 10px 0px;

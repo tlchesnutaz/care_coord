@@ -17,4 +17,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  'react/prop-types':[disabled]
+  // disable eslint prop-types related warnings
 }

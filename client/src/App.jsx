@@ -32,7 +32,7 @@ export default function App() {
           </ProtectedRoute>}
         />
         <Route 
-          path="/petCard"
+          path="/petcard"
           element={<ProtectedRoute token={token} redirectTo="/">
             < PetList/>
           </ProtectedRoute>}

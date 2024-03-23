@@ -62,7 +62,7 @@ export default function Auth(){
               btnText="SIGN IN"
               errMsg={errMsg}
             />
-            { !token && <p className="account" onClick={toggleForm}> No Account? <br /> Create One! </p> }
+            { !token && <p className="account" onClick={toggleForm}> create a new account </p> }
           </>
         }
       </div>

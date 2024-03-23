@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react"
 import { AxiosContext } from "../context/AxiosContext"
+import { useNavigate } from "react-router-dom"
 
 
 export default function AddPetForm() {
 
+  const navigateTo = useNavigate() // Initialize history
   const { pets, addPet } = useContext(AxiosContext)
 
   const initInputs = {
@@ -33,6 +35,7 @@ export default function AddPetForm() {
     e.preventDefault()
     addPet(inputs) // inputs.owner
     setInputs(initInputs)
+    navigateTo("/petcard"); // Redirect to user's pets page
   }
   // console.log(pets)
     
