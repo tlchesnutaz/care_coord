@@ -172,8 +172,8 @@ export default function EditForm(props) {
 				value={edits.owner}
 				onChange={handleEditChange}
 			/>
-			<button onClick={handleEditSave}>Save</button>
-      <button onClick={handleToggle}>Cancel</button>
+			<button className='saveButton' onClick={handleEditSave}>Save</button>
+      <button className='cancelButton' onClick={handleToggle}>Cancel</button>
 		</form>
 	)
 }

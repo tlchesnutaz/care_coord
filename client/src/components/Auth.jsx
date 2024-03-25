@@ -12,7 +12,7 @@ export default function Auth(){
   const [toggle, setToggle] = useState(false)
 
   /* instead of const = userData - we don't need all, so just destruct what we do */
-  const { signup, login, errMsg, resetAuthErr, token, getPets } = useContext(AxiosContext)
+  const { signup, login, errMsg, resetAuthErr, token } = useContext(AxiosContext)
 
   function handleChange(e){
     const {name, value} = e.target
@@ -50,8 +50,9 @@ export default function Auth(){
               inputs={inputs}
               btnText="CREATE ACCOUNT"
               errMsg={errMsg}
+              pText="Already have an account?"
             />
-            { !token && <p className="account" onClick={toggleForm}> Have an Account? </p> }
+            { !token && <p className="account" onClick={toggleForm} style={{color:'red'}}> Go to Sign In </p> }
           </>
         :
           <>
@@ -61,8 +62,9 @@ export default function Auth(){
               inputs={inputs}
               btnText="SIGN IN"
               errMsg={errMsg}
+              pText="Need to create an account?"
             />
-            { !token && <p className="account" onClick={toggleForm}> create a new account </p> }
+            { !token && <p className="account" onClick={toggleForm} style={{color:'red'}}> Register Here </p> }
           </>
         }
       </div>

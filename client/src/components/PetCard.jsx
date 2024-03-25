@@ -42,8 +42,8 @@ export default function PetCard(props){
           <p>Vet Phone #: {pet.vetPhone}</p>
           <p>Notes: {pet.notes}</p>
           <p>Owner: {pet.owner}</p> {/* how to render Owner's name? */}
-          <button onClick={() => setToggleEdit(!toggleEdit)}>Edit</button>
-          <button onClick={() => deletePet(pet._id)}> Remove </button>      
+          <button className='editButton' onClick={() => setToggleEdit(!toggleEdit)}>Edit</button>
+          <button className='removeButton' onClick={() => deletePet(pet._id)}> Remove </button>      
         </>
       }     
       {toggleEdit &&
